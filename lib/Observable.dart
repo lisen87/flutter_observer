@@ -1,6 +1,6 @@
 import 'package:flutter_observer/Observer.dart';
 
-///单例 被观察者
+///Single case
 
 class Observable {
   factory Observable() {
@@ -25,38 +25,38 @@ class Observable {
     return observers.length;
   }
 
-  ///添加观察者
+  ///Add observer
   addObserver(Observer observer) {
     if (!_checkContains(observer)) {
       observers.add(observer);
     }
   }
 
-  ///在页面不使用的时候移除观察者
+  ///Remove viewers when the page is not in use
   removeObserver(Observer observer) {
     observers.remove(observer);
   }
 
-  ///发送通知的页面中使用
-  /// stateNames 要更新的state 名称
-  /// map 通知数据，可以为null
+  ///Used in the page that sent the notification
+  /// stateNames state name to update
+  /// Map notification data, can be null
   notifyObservers(List<String> stateNames, {Map map}) {
     if (stateNames == null || stateNames.length == 0) {
       for (int i = observers.length - 1; i >= 0; i--) {
-        observers[i].updata(this, map);
+        observers[i].update(this, map);
       }
     } else {
       stateNames.forEach((stateName) {
         for (int i = observers.length - 1; i >= 0; i--) {
           if (stateName == observers[i].toString().split("#")[0].toString()) {
-            observers[i].updata(this, map);
+            observers[i].update(this, map);
           }
         }
       });
     }
   }
 
-  ///检查是否添加过，防止在dispose方法中未调用removeObserver，出现错误
+  ///Check if it has been added to prevent the removal of remove Observer in the dispose method, an error occurs
   bool _checkContains(Observer observer) {
     List list = observer.toString().split("#");
     for (int i = 0; i < observers.length; i++) {
