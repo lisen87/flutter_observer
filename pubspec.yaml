@@ -1,8 +1,8 @@
 name: flutter_observer
-description: A new Flutter package project.
-version: 0.0.1
-author:
-homepage:
+description: 类似android BroadcastReceiver 和 ios NSNotification，用于通知页面刷新。这是一个纯dart语言开发的package
+version: 1.0.1
+author: lisen <453354858@qq.com>
+homepage: https://github.com/lisen87/flutter_observer.git
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
