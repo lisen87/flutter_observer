@@ -5,5 +5,5 @@ import 'package:flutter_observer/Observable.dart';
 ///In the state initState method you need to call Observable().addObserver(this);
 ///Call Observable().removeObserver(this) in the state dispose method;
 abstract class Observer {
-  update(Observable observable, Map map);
+  update(Observable observable,String notifyName, Map map);
 }

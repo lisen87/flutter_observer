@@ -45,8 +45,9 @@ class BPageState extends State<BPage> with Observer{
   }
 
   @override
-  update(Observable observable, Map map) {
+  update(Observable observable,String notifyName, Map map) {
     notifyText = "I received notifycation";
+    print("notifyName=>$notifyName");
     if(map == null){
       print("CPage通知所有Observer");
     }

@@ -43,7 +43,7 @@ class CPageState extends State<CPage> {
               onPressed: () {
                 Observable.instance.notifyObservers([
                   "BPageState",
-                ],map: Map());
+                ],notifyName : "可以通过notifyName判断通知",map: Map());
               },
               child: Text("只发送通知到BPageState")),
           RaisedButton(

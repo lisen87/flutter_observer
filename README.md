@@ -10,7 +10,7 @@ android BroadcastReceiver iOS NSNotification
 
 ```yaml
 # add this line to your dependencies
-flutter_observer: ^1.0.4
+flutter_observer: ^1.0.6
 ```
 
 ```dart
@@ -31,7 +31,7 @@ class APageState extends State<APage> with Observer{
     super.dispose();
   }
   @override
-   updata(Observable observable, Map map) {
+   update(Observable observable,String notifyName, Map map) {
     ///do your work
       if(map != null && map.containsKey("background")){
         MaterialColor bc = map["background"];
@@ -61,7 +61,7 @@ class CPage extends StatefulWidget {
                 ///Observable.instance.notifyObservers(null);
                 Observable.instance.notifyObservers([
                   "APageState",
-                ], map: map);
+                ], notifyName : "可以通过notifyName判断通知",map: map);
               },
               child: Text("只发送通知到APageState修改背景色")),
         ],

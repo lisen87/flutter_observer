@@ -56,7 +56,7 @@ class APageState extends State<APage> with Observer{
     super.dispose();
   }
   @override
-  update(Observable observable, Map map) {
+  update(Observable observable, String notifyName,Map map) {
 
     if(map != null && map.containsKey("background")){
       bc = map["background"];

@@ -1,6 +1,6 @@
 name: flutter_observer
 description: similar android BroadcastReceiver andd ios NSNotification,Used to notify the page to refresh.This is a pure dart language development package
-version: 1.0.4
+version: 1.0.6
 author: lisen <453354858@qq.com>
 homepage: https://github.com/lisen87/flutter_observer.git
 
