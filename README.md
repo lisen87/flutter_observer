@@ -10,7 +10,7 @@ android BroadcastReceiver iOS NSNotification
 
 ```yaml
 # add this line to your dependencies
-flutter_observer: ^1.0.6
+flutter_observer: ^1.0.7
 ```
 
 ```dart
@@ -33,13 +33,6 @@ class APageState extends State<APage> with Observer{
   @override
    update(Observable observable,String notifyName, Map map) {
     ///do your work
-      if(map != null && map.containsKey("background")){
-        MaterialColor bc = map["background"];
-      }else if(map != null && map.containsKey("notifyText")){
-        String notifyText = map["notifyText"];
-      }else{
-        print("通知所有Observer");
-      }
       setState(() {
       });
     }

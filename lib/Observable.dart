@@ -32,6 +32,12 @@ class Observable {
     }
   }
 
+  ///重复添加
+  ///add Repeatedly
+  addRepeatedlyObserver(Observer observer) {
+    observers.add(observer);
+  }
+
   ///Remove viewers when the page is not in use
   removeObserver(Observer observer) {
     observers.remove(observer);

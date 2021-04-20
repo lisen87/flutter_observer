@@ -1,4 +1,4 @@
-## [1.0.6]
+## [1.0.7]
 * Optimize the addition logic of the observable
 ## [1.0.5]
 * Increase notification name
