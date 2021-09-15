@@ -21,7 +21,7 @@ class CPageState extends State<CPage> {
       body: Column(
         children: <Widget>[
           Container(height: 100, child: Center(child: Text("C页面，负责发送通知"))),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {
                 Map map = Map();
                 map["background"] = Colors.green;
@@ -30,7 +30,7 @@ class CPageState extends State<CPage> {
                 ], map: map);
               },
               child: Text("只发送通知到APageState修改背景色")),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {
                 Map map = Map();
                 map["notifyText"] = "我是CPage发来的通知";
@@ -39,20 +39,20 @@ class CPageState extends State<CPage> {
                 ], map: map);
               },
               child: Text("只发送通知到APageState修改文本显示")),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {
                 Observable.instance.notifyObservers([
                   "BPageState",
                 ],notifyName : "可以通过notifyName判断通知",map: Map());
               },
               child: Text("只发送通知到BPageState")),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {
-                Observable.instance.notifyObservers(null);
+                Observable.instance.notifyObservers([]);
               },
               child: Text("发送通知到任何Observer")),
 
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {
                 print("Observable中的数量 = " + Observable.instance.length().toString());
               },

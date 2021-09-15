@@ -25,7 +25,7 @@ class BPageState extends State<BPage> with Observer{
       body: Column(children: <Widget>[
         Container(height: 100, child: Center(child: Text("B页面"))),
 
-        RaisedButton(onPressed: () {
+        ElevatedButton(onPressed: () {
           Navigator.push(
               context, new MaterialPageRoute(builder: (context) {
             return CPage();
@@ -45,7 +45,7 @@ class BPageState extends State<BPage> with Observer{
   }
 
   @override
-  update(Observable observable,String notifyName, Map map) {
+  update(Observable observable,String? notifyName, Map? map) {
     notifyText = "I received notifycation";
     print("notifyName=>$notifyName");
     if(map == null){

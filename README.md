@@ -10,7 +10,7 @@ android BroadcastReceiver iOS NSNotification
 
 ```yaml
 # add this line to your dependencies
-flutter_observer: ^1.0.7
+flutter_observer: ^2.0.0
 ```
 
 ```dart

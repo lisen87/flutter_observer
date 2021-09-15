@@ -1,3 +1,6 @@
+## [2.0.0]
+* 使用flutter 2.0 迁移至空安全
+* Use flutter 2.0 to migrate to null-safety
 ## [1.0.7]
 * Optimize the addition logic of the observable
 ## [1.0.5]

@@ -15,10 +15,10 @@ class Observable {
     return _instance;
   }
 
-  List<Observer> observers;
+  late List<Observer> observers;
 
   Observable._() {
-    observers = List();
+    observers = [];
   }
 
   int length() {
@@ -46,8 +46,8 @@ class Observable {
   ///Used in the page that sent the notification
   /// stateNames state name to update
   /// Map notification data, can be null
-  notifyObservers(List<String> stateNames, {String notifyName,Map map}) {
-    if (stateNames == null || stateNames.length == 0) {
+  notifyObservers(List<String> stateNames, {String? notifyName,Map? map}) {
+    if (stateNames.length == 0) {
       for (int i = observers.length - 1; i >= 0; i--) {
         observers[i].update(this, notifyName,map);
       }
